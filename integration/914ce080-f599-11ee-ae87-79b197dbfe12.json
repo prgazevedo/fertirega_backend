@@ -1,0 +1,87 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "clientConfiguration" : {
+        "host" : "eu1.cloud.thethings.network",
+        "customHost" : false,
+        "port" : 8883,
+        "ssl" : true,
+        "maxBytesInMessage" : 32368,
+        "connectTimeoutSec" : 10,
+        "credentials" : {
+          "type" : "basic",
+          "username" : "m5-ttn-test@ttn",
+          "password" : "NNSXS.J6CELRIAGNUQLS5BTRR3FBERFBDGHXQKM3JEX6I.CI7QEYCWOGA3MC3TVZ7DMB3FTTU4VEUEC7W5WI65NWNXJL6SUJJQ"
+        }
+      },
+      "topicFilters" : [ {
+        "filter" : "v3/+/devices/+/up",
+        "qos" : 0
+      } ],
+      "downlinkTopicPattern" : "v3/m5-ttn-test@ttn/devices/${devId}/down/push",
+      "metadata" : { }
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "9131b760-f599-11ee-ae87-79b197dbfe12"
+    },
+    "downlinkConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "e2e4ba40-5722-11ef-887e-effae2bd2f60"
+    },
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "914ce080-f599-11ee-ae87-79b197dbfe12"
+    },
+    "name" : "The Things Stack Community integration",
+    "remote" : false,
+    "routingKey" : "9a9e5314-b076-1844-0b4c-540c89ad7aee",
+    "secret" : "5nfwcis57b4rlh489oz4",
+    "type" : "TTN"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "914ce080-f599-11ee-ae87-79b197dbfe12"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3a73eda0-f5f6-11ee-bfe7-d554a4e9ea87"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "1255ffc0-5690-11ef-aa15-a127638e3a77"
+    },
+    "to" : {
+      "entityType" : "INTEGRATION",
+      "id" : "914ce080-f599-11ee-ae87-79b197dbfe12"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-2",
+      "lastUpdateTs" : 1723314152429,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}
