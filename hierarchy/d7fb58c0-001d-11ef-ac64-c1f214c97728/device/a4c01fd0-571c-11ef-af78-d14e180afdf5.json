@@ -1,0 +1,82 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "d7fb58c0-001d-11ef-ac64-c1f214c97728"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "4667d030-5691-11ef-aa15-a127638e3a77"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "a4c01fd0-571c-11ef-af78-d14e180afdf5"
+    },
+    "label" : "",
+    "name" : "eui-70b3d57ed006996d",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "d7fb58c0-001d-11ef-ac64-c1f214c97728"
+    },
+    "softwareId" : null,
+    "type" : "ATOM_LORA"
+  },
+  "credentials" : {
+    "credentialsId" : "f773t9ekf1f1aif03fvb",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1723315331288,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1723306478766,
+      "longValue" : 1723306478762,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1723367867288,
+      "longValue" : 1723367866334,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "version",
+      "lastUpdateTs" : 1723316929458,
+      "longValue" : null,
+      "strValue" : "V.0.11"
+    } ]
+  }
+}
