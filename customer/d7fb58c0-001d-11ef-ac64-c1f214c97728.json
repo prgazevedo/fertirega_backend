@@ -1,0 +1,32 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "allowWhiteLabeling" : true,
+      "homeDashboardId" : "04cafca0-0020-11ef-a4cc-5f5107b4a484",
+      "homeDashboardHideToolbar" : false
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : null,
+    "country" : "Portugal",
+    "customerId" : null,
+    "email" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "d7fb58c0-001d-11ef-ac64-c1f214c97728"
+    },
+    "name" : "Regas4.0",
+    "ownerId" : null,
+    "parentCustomerId" : null,
+    "phone" : null,
+    "state" : null,
+    "title" : "Regas4.0",
+    "zip" : null
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
