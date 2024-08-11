@@ -28,7 +28,7 @@
       "entityType" : "DEVICE",
       "id" : "a4c01fd0-571c-11ef-af78-d14e180afdf5"
     },
-    "label" : "",
+    "label" : "Atom_NTU_LoraWAN_Lisbon",
     "name" : "eui-70b3d57ed006996d",
     "ownerId" : {
       "entityType" : "CUSTOMER",
@@ -42,6 +42,7 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : true,
@@ -64,8 +65,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1723407857288,
-      "longValue" : 1723407856765,
+      "lastUpdateTs" : 1723407956289,
+      "longValue" : 1723407953893,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {
