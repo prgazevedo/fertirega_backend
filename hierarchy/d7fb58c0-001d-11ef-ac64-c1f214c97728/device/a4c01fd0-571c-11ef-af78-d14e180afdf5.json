@@ -42,7 +42,6 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : true,
@@ -65,11 +64,27 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1723367867288,
-      "longValue" : 1723367866334,
+      "lastUpdateTs" : 1723407857288,
+      "longValue" : 1723407856765,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Valve1State",
+      "lastUpdateTs" : 1723406059507,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Valve2State",
+      "lastUpdateTs" : 1723407863138,
+      "longValue" : null,
+      "strValue" : null
+    }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
