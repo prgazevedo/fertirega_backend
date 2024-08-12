@@ -610,16 +610,16 @@
                   "persistentPollingInterval" : 1000
                 },
                 "getAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "Valve1State"
+                  "key" : "Valve1State",
+                  "scope" : "SHARED_SCOPE"
                 },
                 "getTimeSeries" : {
                   "key" : "state"
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : true
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                 }
               },
               "checkState" : {
@@ -631,8 +631,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "Valve1State"
+                  "key" : "Valve1State",
+                  "scope" : "SHARED_SCOPE"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -652,8 +652,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "Valve1State"
+                  "key" : "Valve1State",
+                  "scope" : "SHARED_SCOPE"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -680,11 +680,12 @@
                   "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                 }
               },
-              "autoScale" : false,
+              "autoScale" : true,
               "horizontalFill" : false,
               "verticalFill" : false,
               "checkedAppearance" : {
                 "type" : "filled",
+                "autoScale" : true,
                 "showLabel" : true,
                 "label" : "Opened",
                 "showIcon" : true,
@@ -693,14 +694,14 @@
                 "iconSizeUnit" : "px",
                 "mainColor" : "#198038",
                 "backgroundColor" : "#FFFFFF",
-                "borderRadius" : "4px",
                 "customStyle" : {
                   "enabled" : null,
                   "hovered" : null,
                   "pressed" : null,
                   "activated" : null,
                   "disabled" : null
-                }
+                },
+                "borderRadius" : "4px"
               },
               "uncheckedAppearance" : {
                 "type" : "filled",
@@ -733,7 +734,7 @@
               },
               "padding" : "12px"
             },
-            "title" : "Set Irrigation Valve 1",
+            "title" : "Set Valve 1 - TTN",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
@@ -789,7 +790,7 @@
                 "color" : "#2196f3",
                 "settings" : {
                   "yAxisId" : "default",
-                  "showInLegend" : true,
+                  "showInLegend" : false,
                   "dataHiddenByDefault" : false,
                   "type" : "line",
                   "lineSettings" : {
@@ -850,6 +851,7 @@
                       }
                     }
                   },
+                  "tooltipValueFormatter" : null,
                   "comparisonSettings" : {
                     "showValuesForComparison" : false,
                     "comparisonValuesLabel" : "",
@@ -861,7 +863,8 @@
                 "aggregationType" : null,
                 "funcBody" : null,
                 "usePostProcessing" : null,
-                "postFuncBody" : null
+                "postFuncBody" : null,
+                "units" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -878,7 +881,7 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "timewindowMs" : 60000,
+                "timewindowMs" : 900000,
                 "quickInterval" : "CURRENT_DAY",
                 "interval" : 1000
               },
@@ -1124,18 +1127,18 @@
               },
               "padding" : "12px",
               "states" : [ {
-                "label" : "Off",
+                "label" : "Closed",
                 "value" : 0,
                 "sourceType" : "constant",
                 "sourceValue" : false
               }, {
-                "label" : "On",
+                "label" : "Open",
                 "value" : 1,
                 "sourceType" : "constant",
                 "sourceValue" : true
               } ]
             },
-            "title" : "Irrigation Valve 1 Status",
+            "title" : "Irrigation Valve 1",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : null,
@@ -1208,16 +1211,16 @@
                   "persistentPollingInterval" : 1000
                 },
                 "getAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "Valve1State"
+                  "key" : "Valve2State",
+                  "scope" : "SHARED_SCOPE"
                 },
                 "getTimeSeries" : {
                   "key" : "state"
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : true
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                 }
               },
               "checkState" : {
@@ -1229,8 +1232,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "Valve1State"
+                  "key" : "Valve2State",
+                  "scope" : "SHARED_SCOPE"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -1250,8 +1253,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "Valve1State"
+                  "key" : "Valve2State",
+                  "scope" : "SHARED_SCOPE"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -1278,11 +1281,12 @@
                   "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                 }
               },
-              "autoScale" : false,
+              "autoScale" : true,
               "horizontalFill" : false,
               "verticalFill" : false,
               "checkedAppearance" : {
                 "type" : "filled",
+                "autoScale" : true,
                 "showLabel" : true,
                 "label" : "Opened",
                 "showIcon" : true,
@@ -1291,14 +1295,14 @@
                 "iconSizeUnit" : "px",
                 "mainColor" : "#198038",
                 "backgroundColor" : "#FFFFFF",
-                "borderRadius" : "4px",
                 "customStyle" : {
                   "enabled" : null,
                   "hovered" : null,
                   "pressed" : null,
                   "activated" : null,
                   "disabled" : null
-                }
+                },
+                "borderRadius" : "4px"
               },
               "uncheckedAppearance" : {
                 "type" : "filled",
@@ -1331,7 +1335,7 @@
               },
               "padding" : "12px"
             },
-            "title" : "Set Irrigation Valve 2 - TTN Integration",
+            "title" : "Set Valve 2 - TTN",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
@@ -1780,7 +1784,7 @@
                 "color" : "#4caf50",
                 "settings" : {
                   "yAxisId" : "default",
-                  "showInLegend" : true,
+                  "showInLegend" : false,
                   "dataHiddenByDefault" : false,
                   "type" : "line",
                   "lineSettings" : {
@@ -1841,6 +1845,7 @@
                       }
                     }
                   },
+                  "tooltipValueFormatter" : null,
                   "comparisonSettings" : {
                     "showValuesForComparison" : false,
                     "comparisonValuesLabel" : "",
@@ -1870,7 +1875,7 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "timewindowMs" : 60000,
+                "timewindowMs" : 900000,
                 "quickInterval" : "CURRENT_DAY",
                 "interval" : 1000
               },
@@ -1921,7 +1926,7 @@
               },
               "yAxes" : {
                 "default" : {
-                  "units" : null,
+                  "units" : "",
                   "decimals" : 0,
                   "show" : true,
                   "label" : "",
@@ -2116,18 +2121,18 @@
               },
               "padding" : "12px",
               "states" : [ {
-                "label" : "Off",
+                "label" : "Closed",
                 "value" : 0,
                 "sourceType" : "constant",
                 "sourceValue" : false
               }, {
-                "label" : "On",
+                "label" : "Open",
                 "value" : 1,
                 "sourceType" : "constant",
                 "sourceValue" : true
               } ]
             },
-            "title" : "Irrigation Valve 2 Status",
+            "title" : "Irrigation Valve 2",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : null,
@@ -2263,6 +2268,7 @@
               "outOfRangeColor" : "#ccc",
               "showRangeThresholds" : true,
               "rangeThreshold" : {
+                "type" : "constant",
                 "yAxisId" : "default",
                 "units" : "%",
                 "decimals" : 0,
@@ -2394,7 +2400,7 @@
                 "animationEasingUpdate" : "cubicOut",
                 "animationDelayUpdate" : 0
               },
-              "showLegend" : true,
+              "showLegend" : false,
               "legendPosition" : "top",
               "legendLabelFont" : {
                 "family" : "Roboto",
@@ -2506,6 +2512,375 @@
           "row" : 0,
           "col" : 0,
           "id" : "6ae6b48c-97d4-fadd-de36-6b8a1ceff636"
+        },
+        "12d0d060-9817-8753-5c5e-5fc1bdaef51f" : {
+          "type" : "latest",
+          "sizeX" : 19,
+          "sizeY" : 11,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 300000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1693821090727,
+                  "endTimeMs" : 1693907490727
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgba(255,255,255,0.15)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "displayPagination" : false,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "displayEntityName" : true,
+              "displayEntityType" : false,
+              "entitiesTitle" : "Devices",
+              "entityNameColumnTitle" : "Name",
+              "enableSelectColumnDisplay" : true
+            },
+            "title" : " Active Devices",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "20px",
+              "fontWeight" : "bold",
+              "opacity" : "0.67",
+              "padding" : "5px 10px 5px 0px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "device",
+              "deviceId" : "a4c01fd0-571c-11ef-af78-d14e180afdf5",
+              "entityAliasId" : null,
+              "dataKeys" : [ {
+                "name" : "lastActivityTime",
+                "type" : "attribute",
+                "label" : "lastActivityTime",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.8988585794440962
+              }, {
+                "name" : "PULSE_COUNTER_0",
+                "type" : "timeseries",
+                "label" : "PULSE_COUNTER_0",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.04469229905468475
+              }, {
+                "name" : "PULSE_COUNTER_1",
+                "type" : "timeseries",
+                "label" : "PULSE_COUNTER_1",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.09311124965901696
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "enableDataExport" : true,
+            "widgetStyle" : {
+              "borderBottom" : "solid 1px #aaa",
+              "borderRight" : "solid 1px #aaa",
+              "backgroundImage" : "url(https://img.thingsboard.io/dashboards/smart-building/devices-bg.jpg)",
+              "backgroundSize" : "cover"
+            },
+            "actions" : {
+              "headerButton" : [ ],
+              "actionCellButton" : [ {
+                "name" : "Navigate to Device Details",
+                "icon" : "play_arrow",
+                "type" : "custom",
+                "customFunction" : "var deviceService = widgetContext.deviceService;\n\ndeviceService.getDevice(entityId.id, {ignoreLoading: true}).subscribe(\n    function (device) {\n        var deviceType = device.type;\n        var params = {\n            entityId: entityId,\n            entityName: entityName\n        };\n        var targetDashboardStateId;\n        switch (deviceType) {\n          case \"energy-meter\":\n              targetDashboardStateId = \"energy_meter\";\n              break;\n          case \"hvac\":\n              targetDashboardStateId = \"hvac\";\n              break;\n          case \"smart-sensor\":\n              targetDashboardStateId = \"smart_sensor\";\n              break;\n          case \"water-meter\":\n              targetDashboardStateId = \"water_meter\";\n              break;\n        }\n        if (targetDashboardStateId) {\n              widgetContext.stateController.openState(targetDashboardStateId, params, false);\n        }\n    }\n);\n",
+                "id" : "f1d4aacf-d420-6ce9-1fd2-8e459258fbcc"
+              } ],
+              "rowClick" : [ {
+                "name" : "Navigate to Device Details",
+                "icon" : "more_horiz",
+                "type" : "custom",
+                "customFunction" : "var deviceService = widgetContext.deviceService;\n\ndeviceService.getDevice(entityId.id, {ignoreLoading: true}).subscribe(\n    function (device) {\n        var deviceType = device.type;\n        var params = {\n            entityId: entityId,\n            entityName: entityName\n        };\n        var targetDashboardStateId;\n        switch (deviceType) {\n          case \"energy-meter\":\n              targetDashboardStateId = \"energy_meter\";\n              break;\n          case \"hvac\":\n              targetDashboardStateId = \"hvac\";\n              break;\n          case \"smart-sensor\":\n              targetDashboardStateId = \"smart_sensor\";\n              break;\n          case \"water-meter\":\n              targetDashboardStateId = \"water_meter\";\n              break;\n        }\n        if (targetDashboardStateId) {\n              widgetContext.stateController.openState(targetDashboardStateId, params, false);\n        }\n    }\n);\n",
+                "id" : "c1120dc4-a51a-d4f6-b403-96ad6255fcb9"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "configMode" : "advanced",
+            "displayTimewindow" : true,
+            "titleFont" : null,
+            "titleColor" : null,
+            "titleIcon" : null
+          },
+          "id" : "12d0d060-9817-8753-5c5e-5fc1bdaef51f",
+          "typeFullFqn" : "system.cards.entities_table"
+        },
+        "946a5d24-8f3e-ecfd-9540-fdf610767c13" : {
+          "type" : "alarm",
+          "sizeX" : 26,
+          "sizeY" : 12,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 2592000000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgba(255,255,255,0.15)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "displayDetails" : true,
+              "allowAcknowledgment" : true,
+              "allowClear" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "-createdTime",
+              "alarmsTitle" : "Alarms",
+              "enableSelectColumnDisplay" : true,
+              "enableFilter" : true
+            },
+            "title" : "Alarms",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "20px",
+              "fontWeight" : "bold",
+              "opacity" : "0.67",
+              "padding" : "5px 10px 5px 0px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "entity",
+              "name" : "alarms",
+              "entityAliasId" : "b642a5fd-7d5d-8a8f-eb84-03255e2190a6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "createdTime",
+                "type" : "alarm",
+                "label" : "Created time",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.7160841983752053
+              }, {
+                "name" : "originator",
+                "type" : "alarm",
+                "label" : "Originator",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.01300421716139466
+              }, {
+                "name" : "type",
+                "type" : "alarm",
+                "label" : "Type",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.1447917515829038
+              }, {
+                "name" : "severity",
+                "type" : "alarm",
+                "label" : "Severity",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.09241352843515527
+              }, {
+                "name" : "type",
+                "type" : "alarm",
+                "label" : "Details",
+                "color" : "#9c27b0",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : true,
+                  "useCellContentFunction" : true,
+                  "cellContentFunction" : "if (alarm.details.data) {\n    return alarm.details.data;\n}\nreturn '';\n",
+                  "cellStyleFunction" : "var style = {\n    fontWeight: 600,\n    color: 'rgb(251, 69, 64)'\n};\n\nreturn style;"
+                },
+                "_hash" : 0.4062302818196104,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "status",
+                "type" : "alarm",
+                "label" : "Status",
+                "color" : "#9c27b0",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.8477401307684032
+              } ]
+            },
+            "alarmsPollingInterval" : 5,
+            "datasources" : [ ],
+            "enableDataExport" : true,
+            "widgetStyle" : {
+              "backgroundImage" : "url(https://img.thingsboard.io/dashboards/smart-building/alarms-bg.jpg)",
+              "backgroundSize" : "cover",
+              "backgroundPosition" : "center",
+              "borderBottom" : "solid 1px #aaa",
+              "borderRight" : "solid 1px #aaa"
+            },
+            "actions" : {
+              "actionCellButton" : [ {
+                "name" : "Navigate to Details",
+                "icon" : "play_arrow",
+                "type" : "custom",
+                "customFunction" : "var deviceService = widgetContext.deviceService;\nif (entityId.entityType === 'DEVICE') {\n    deviceService.getDevice(entityId.id, {ignoreLoading: true}).subscribe(\n        function (device) {\n            var deviceType = device.type;\n            var params = {\n                entityId: entityId,\n                entityName: entityName\n            };\n            var targetDashboardStateId;\n            switch (deviceType) {\n              case \"energy-meter\":\n                  targetDashboardStateId = \"energy_meter\";\n                  break;\n              case \"hvac\":\n                  targetDashboardStateId = \"hvac\";\n                  break;\n              case \"smart-sensor\":\n                  targetDashboardStateId = \"smart_sensor\";\n                  break;\n              case \"water-meter\":\n                  targetDashboardStateId = \"water_meter\";\n                  break;\n            }\n            if (targetDashboardStateId) {\n                  widgetContext.stateController.openState(targetDashboardStateId, params, false);\n            }\n        }\n    );\n}",
+                "id" : "1b5c890d-e94f-3317-012a-d3ba9cb12cc9"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "displayTimewindow" : true,
+            "alarmFilterConfig" : {
+              "statusList" : [ "ACTIVE", "CLEARED" ],
+              "severityList" : [ ],
+              "typeList" : [ ],
+              "searchPropagatedAlarms" : false
+            },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "id" : "946a5d24-8f3e-ecfd-9540-fdf610767c13",
+          "typeFullFqn" : "system.alarm_widgets.alarms_table"
+        },
+        "b366c5d1-2cf1-490b-ec9e-4b5719357192" : {
+          "typeFullFqn" : "system.scheduling.scheduler_events",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 4.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "title" : "Scheduler events",
+              "displayCreatedTime" : false,
+              "displayType" : false,
+              "displayCustomer" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "name",
+              "enabledViews" : "both",
+              "noDataDisplayMessage" : "",
+              "forceDefaultEventType" : "",
+              "customEventTypes" : [ ]
+            },
+            "title" : "Scheduler events",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "Simulated",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Sin",
+                "color" : "#2196f3",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.472295003170325,
+                "funcBody" : "return Math.round(1000*Math.sin(time/5000));"
+              }, {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Cos",
+                "color" : "#4caf50",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.8926244886945558,
+                "funcBody" : "return Math.round(1000*Math.cos(time/5000));"
+              }, {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#f44336",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.6401141393938932,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "actions" : { }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b366c5d1-2cf1-490b-ec9e-4b5719357192"
         }
       },
       "states" : {
@@ -2516,54 +2891,72 @@
             "main" : {
               "widgets" : {
                 "4a28267b-d473-915f-f619-537d36e1c78b" : {
-                  "sizeX" : 14,
+                  "sizeX" : 11,
                   "sizeY" : 6,
                   "mobileHide" : true,
                   "desktopHide" : false,
                   "row" : 0,
-                  "col" : 0
+                  "col" : 14
                 },
                 "2b420022-f791-6402-0534-fa9606c3fc8e" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "row" : 6,
+                  "row" : 0,
                   "col" : 0
                 },
                 "08ccd1ae-d3be-aebf-d36c-c29464e7275e" : {
-                  "sizeX" : 4,
-                  "sizeY" : 3,
+                  "sizeX" : 6,
+                  "sizeY" : 2,
                   "row" : 0,
-                  "col" : 22
+                  "col" : 8
                 },
                 "d2284505-9d7b-1351-5083-df1a3ff15b39" : {
-                  "sizeX" : 8,
+                  "sizeX" : 6,
                   "sizeY" : 3,
-                  "row" : 0,
-                  "col" : 14
+                  "row" : 2,
+                  "col" : 8
                 },
                 "1712b978-ee7d-aa76-e3b6-c67ef43acd27" : {
-                  "sizeX" : 4,
-                  "sizeY" : 3,
-                  "row" : 3,
-                  "col" : 22
+                  "sizeX" : 6,
+                  "sizeY" : 2,
+                  "row" : 5,
+                  "col" : 8
                 },
                 "3feb59ad-49de-aaf2-156a-34829d014d0a" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "row" : 6,
-                  "col" : 8
+                  "row" : 5,
+                  "col" : 0
                 },
                 "e5a98b7e-cc43-3662-4fdc-c66ddb2b6304" : {
-                  "sizeX" : 8,
+                  "sizeX" : 6,
                   "sizeY" : 3,
-                  "row" : 3,
-                  "col" : 14
+                  "row" : 7,
+                  "col" : 8
                 },
                 "6ae6b48c-97d4-fadd-de36-6b8a1ceff636" : {
                   "sizeX" : 8,
-                  "sizeY" : 5,
+                  "sizeY" : 4,
+                  "row" : 10,
+                  "col" : 0
+                },
+                "12d0d060-9817-8753-5c5e-5fc1bdaef51f" : {
+                  "sizeX" : 11,
+                  "sizeY" : 3,
                   "row" : 6,
-                  "col" : 16
+                  "col" : 14
+                },
+                "946a5d24-8f3e-ecfd-9540-fdf610767c13" : {
+                  "sizeX" : 11,
+                  "sizeY" : 5,
+                  "row" : 13,
+                  "col" : 14
+                },
+                "b366c5d1-2cf1-490b-ec9e-4b5719357192" : {
+                  "sizeX" : 11,
+                  "sizeY" : 4,
+                  "row" : 9,
+                  "col" : 14
                 }
               },
               "gridSettings" : {
@@ -2588,6 +2981,26 @@
               "entityType" : "DEVICE",
               "id" : "3426ad90-f5e5-11ee-bfe7-d554a4e9ea87"
             }
+          }
+        },
+        "b642a5fd-7d5d-8a8f-eb84-03255e2190a6" : {
+          "id" : "b642a5fd-7d5d-8a8f-eb84-03255e2190a6",
+          "alias" : "Office Devices",
+          "filter" : {
+            "type" : "deviceSearchQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : {
+              "entityType" : "ASSET",
+              "id" : "52f02e30-ee84-11ee-9a30-a12f0dc2368b"
+            },
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : null,
+            "relationType" : "Contains",
+            "deviceTypes" : [ "energy-meter", "smart-sensor", "hvac", "water-meter" ]
           }
         }
       },
