@@ -1878,89 +1878,6 @@
                 "statusList" : [ "ACTIVE" ]
               },
               "latestDataKeys" : [ ]
-            }, {
-              "type" : "device",
-              "deviceId" : "2b34c280-5e4f-11ef-9796-b91050ae5f3d",
-              "dataKeys" : [ {
-                "name" : "Temperature",
-                "type" : "timeseries",
-                "label" : "Temperature 2",
-                "color" : "#4caf50",
-                "settings" : {
-                  "yAxisId" : "default",
-                  "showInLegend" : true,
-                  "dataHiddenByDefault" : false,
-                  "type" : "line",
-                  "lineSettings" : {
-                    "showLine" : true,
-                    "step" : false,
-                    "stepType" : "start",
-                    "smooth" : false,
-                    "lineType" : "solid",
-                    "lineWidth" : 2,
-                    "showPoints" : false,
-                    "showPointLabel" : false,
-                    "pointLabelPosition" : "top",
-                    "pointLabelFont" : {
-                      "family" : "Roboto",
-                      "size" : 11,
-                      "sizeUnit" : "px",
-                      "style" : "normal",
-                      "weight" : "400",
-                      "lineHeight" : "1"
-                    },
-                    "pointLabelColor" : "rgba(0, 0, 0, 0.76)",
-                    "enablePointLabelBackground" : false,
-                    "pointLabelBackground" : "rgba(255,255,255,0.56)",
-                    "pointShape" : "emptyCircle",
-                    "pointSize" : 4,
-                    "fillAreaSettings" : {
-                      "type" : "none",
-                      "opacity" : 0.4,
-                      "gradient" : {
-                        "start" : 100,
-                        "end" : 0
-                      }
-                    }
-                  },
-                  "barSettings" : {
-                    "showBorder" : false,
-                    "borderWidth" : 2,
-                    "borderRadius" : 0,
-                    "showLabel" : false,
-                    "labelPosition" : "top",
-                    "labelFont" : {
-                      "family" : "Roboto",
-                      "size" : 11,
-                      "sizeUnit" : "px",
-                      "style" : "normal",
-                      "weight" : "400",
-                      "lineHeight" : "1"
-                    },
-                    "labelColor" : "rgba(0, 0, 0, 0.76)",
-                    "enableLabelBackground" : false,
-                    "labelBackground" : "rgba(255,255,255,0.56)",
-                    "backgroundSettings" : {
-                      "type" : "none",
-                      "opacity" : 0.4,
-                      "gradient" : {
-                        "start" : 100,
-                        "end" : 0
-                      }
-                    }
-                  },
-                  "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
-                  }
-                },
-                "_hash" : 0.4256632385111978
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              },
-              "latestDataKeys" : [ ]
             } ],
             "timewindow" : {
               "hideInterval" : false,
@@ -2111,7 +2028,7 @@
                   "absoluteWidth" : 1000
                 }
               },
-              "showLegend" : true,
+              "showLegend" : false,
               "legendColumnTitleFont" : {
                 "family" : "Roboto",
                 "size" : 12,
@@ -2504,7 +2421,7 @@
                   "absoluteWidth" : 1000
                 }
               },
-              "showLegend" : true,
+              "showLegend" : false,
               "legendColumnTitleFont" : {
                 "family" : "Roboto",
                 "size" : 12,
@@ -2628,7 +2545,7 @@
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
-            "units" : "°C",
+            "units" : "%",
             "decimals" : 0,
             "noDataDisplayMessage" : "",
             "timewindowStyle" : {
@@ -3320,7 +3237,7 @@
               },
               "padding" : "12px"
             },
-            "title" : "Pulse Counter 0",
+            "title" : "Pulse Counter 1",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : null,
@@ -3735,7 +3652,7 @@
               },
               "padding" : "12px"
             },
-            "title" : "Pulse Counter 1",
+            "title" : "Pulse Counter 2",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : null,
