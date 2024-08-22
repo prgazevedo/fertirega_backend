@@ -295,10 +295,29 @@
               "dataKeys" : [ {
                 "name" : "last_activity_time",
                 "type" : "timeseries",
-                "label" : "last_activity_time",
+                "label" : "Last Message",
                 "color" : "#f44336",
                 "settings" : { },
-                "_hash" : 0.8472265601119242
+                "_hash" : 0.8472265601119242,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "timestamp",
+                "type" : "timeseries",
+                "label" : "Device clock",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.44016001054618337,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -314,8 +333,8 @@
             "actions" : {
               "headerButton" : [ ],
               "actionCellButton" : [ {
-                "name" : "Device Details",
-                "icon" : "info",
+                "name" : "Alarm Details",
+                "icon" : "notification_important",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "custom",
@@ -336,6 +355,16 @@
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "c1120dc4-a51a-d4f6-b403-96ad6255fcb9"
+              }, {
+                "name" : "SetRTC",
+                "icon" : "timer",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : null,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "2ecede06-cd85-556e-7aa6-a4c790bd14a8"
               } ],
               "rowClick" : [ ]
             },
@@ -1031,16 +1060,16 @@
                   "persistentPollingInterval" : 1000
                 },
                 "getAttribute" : {
-                  "key" : "Valve1State",
-                  "scope" : "SHARED_SCOPE"
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "valve_0_status"
                 },
                 "getTimeSeries" : {
                   "key" : "state"
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "compareToValue" : true,
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "compareToValue" : true
                 }
               },
               "checkState" : {
@@ -1052,8 +1081,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "key" : "Valve1State",
-                  "scope" : "SHARED_SCOPE"
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "valve_0_status"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -1073,8 +1102,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "key" : "Valve1State",
-                  "scope" : "SHARED_SCOPE"
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "valve_0_status"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -1106,7 +1135,6 @@
               "verticalFill" : false,
               "checkedAppearance" : {
                 "type" : "filled",
-                "autoScale" : true,
                 "showLabel" : true,
                 "label" : "Opened",
                 "showIcon" : true,
@@ -1115,18 +1143,17 @@
                 "iconSizeUnit" : "px",
                 "mainColor" : "#198038",
                 "backgroundColor" : "#FFFFFF",
+                "borderRadius" : "4px",
                 "customStyle" : {
                   "enabled" : null,
                   "hovered" : null,
                   "pressed" : null,
                   "activated" : null,
                   "disabled" : null
-                },
-                "borderRadius" : "4px"
+                }
               },
               "uncheckedAppearance" : {
                 "type" : "filled",
-                "autoScale" : true,
                 "showLabel" : true,
                 "label" : "Closed",
                 "showIcon" : true,
@@ -1135,14 +1162,14 @@
                 "iconSizeUnit" : "px",
                 "mainColor" : "#D12730",
                 "backgroundColor" : "#FFFFFF",
+                "borderRadius" : "4px",
                 "customStyle" : {
                   "enabled" : null,
                   "hovered" : null,
                   "pressed" : null,
                   "activated" : null,
                   "disabled" : null
-                },
-                "borderRadius" : "4px"
+                }
               },
               "background" : {
                 "type" : "color",
@@ -1215,16 +1242,16 @@
                   "persistentPollingInterval" : 1000
                 },
                 "getAttribute" : {
-                  "key" : "Valve2State",
-                  "scope" : "SHARED_SCOPE"
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "valve_1_status"
                 },
                 "getTimeSeries" : {
                   "key" : "state"
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "compareToValue" : true,
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "compareToValue" : true
                 }
               },
               "checkState" : {
@@ -1236,8 +1263,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "key" : "Valve2State",
-                  "scope" : "SHARED_SCOPE"
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "valve_1_status"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -1257,8 +1284,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "key" : "Valve2State",
-                  "scope" : "SHARED_SCOPE"
+                  "scope" : "SHARED_SCOPE",
+                  "key" : "valve_1_status"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
