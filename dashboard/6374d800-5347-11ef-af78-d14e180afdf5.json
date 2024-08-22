@@ -295,10 +295,29 @@
               "dataKeys" : [ {
                 "name" : "last_activity_time",
                 "type" : "timeseries",
-                "label" : "last_activity_time",
+                "label" : "Last Transmission",
                 "color" : "#f44336",
                 "settings" : { },
-                "_hash" : 0.8472265601119242
+                "_hash" : 0.8472265601119242,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "timestamp",
+                "type" : "timeseries",
+                "label" : "Device Time",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6140402779589325,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -314,8 +333,8 @@
             "actions" : {
               "headerButton" : [ ],
               "actionCellButton" : [ {
-                "name" : "Device Details",
-                "icon" : "info",
+                "name" : "Device Alarms",
+                "icon" : "notifications_active",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "custom",
@@ -336,6 +355,16 @@
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "c1120dc4-a51a-d4f6-b403-96ad6255fcb9"
+              }, {
+                "name" : "Reset Clock",
+                "icon" : "update",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "var time = entityId",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "8cd5739b-9e7e-7d68-36d4-5be5d151cb7a"
               } ],
               "rowClick" : [ ]
             },
@@ -3934,7 +3963,6 @@
     "ownerId" : null,
     "title" : "FertiRega PoC"
   },
-  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
