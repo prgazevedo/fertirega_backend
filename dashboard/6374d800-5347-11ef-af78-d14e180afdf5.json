@@ -1052,190 +1052,6 @@
           "col" : 0,
           "id" : "ec41f9cf-2909-524b-d37c-cd0f61d2e602"
         },
-        "50c102a1-a826-be14-edae-cc8c2b33ab67" : {
-          "typeFullFqn" : "system.toggle_button",
-          "type" : "rpc",
-          "sizeX" : 4,
-          "sizeY" : 2,
-          "config" : {
-            "showTitle" : true,
-            "backgroundColor" : "#ffffff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "initialState" : {
-                "action" : "GET_TIME_SERIES",
-                "defaultValue" : false,
-                "executeRpc" : {
-                  "method" : "getValveState",
-                  "requestTimeout" : 5000,
-                  "requestPersistent" : false,
-                  "persistentPollingInterval" : 1000
-                },
-                "getAttribute" : {
-                  "scope" : "SHARED_SCOPE",
-                  "key" : "valve_0_status"
-                },
-                "getTimeSeries" : {
-                  "key" : "valve_0_status"
-                },
-                "dataToValue" : {
-                  "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : true
-                }
-              },
-              "checkState" : {
-                "action" : "SET_ATTRIBUTE",
-                "executeRpc" : {
-                  "method" : "setValveState",
-                  "requestTimeout" : 5000,
-                  "requestPersistent" : false,
-                  "persistentPollingInterval" : 1000
-                },
-                "setAttribute" : {
-                  "key" : "valve_0_status",
-                  "scope" : "SHARED_SCOPE"
-                },
-                "putTimeSeries" : {
-                  "key" : "state"
-                },
-                "valueToData" : {
-                  "type" : "CONSTANT",
-                  "constantValue" : true,
-                  "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */\nreturn value;"
-                }
-              },
-              "uncheckState" : {
-                "action" : "SET_ATTRIBUTE",
-                "executeRpc" : {
-                  "method" : "setValveState",
-                  "requestTimeout" : 5000,
-                  "requestPersistent" : false,
-                  "persistentPollingInterval" : 1000
-                },
-                "setAttribute" : {
-                  "key" : "valve_0_status",
-                  "scope" : "SHARED_SCOPE"
-                },
-                "putTimeSeries" : {
-                  "key" : "state"
-                },
-                "valueToData" : {
-                  "type" : "CONSTANT",
-                  "constantValue" : false,
-                  "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
-                }
-              },
-              "disabledState" : {
-                "action" : "DO_NOTHING",
-                "defaultValue" : false,
-                "getAttribute" : {
-                  "key" : "state",
-                  "scope" : null
-                },
-                "getTimeSeries" : {
-                  "key" : "state"
-                },
-                "dataToValue" : {
-                  "type" : "NONE",
-                  "compareToValue" : true,
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
-                }
-              },
-              "autoScale" : true,
-              "horizontalFill" : false,
-              "verticalFill" : false,
-              "checkedAppearance" : {
-                "type" : "filled",
-                "autoScale" : true,
-                "showLabel" : true,
-                "label" : "Opened",
-                "showIcon" : true,
-                "icon" : "mdi:lock-open-variant",
-                "iconSize" : 24,
-                "iconSizeUnit" : "px",
-                "mainColor" : "#198038",
-                "backgroundColor" : "#FFFFFF",
-                "customStyle" : {
-                  "enabled" : null,
-                  "hovered" : null,
-                  "pressed" : null,
-                  "activated" : null,
-                  "disabled" : null
-                },
-                "borderRadius" : "4px"
-              },
-              "uncheckedAppearance" : {
-                "type" : "filled",
-                "autoScale" : true,
-                "showLabel" : true,
-                "label" : "Closed",
-                "showIcon" : true,
-                "icon" : "lock",
-                "iconSize" : 24,
-                "iconSizeUnit" : "px",
-                "mainColor" : "#D12730",
-                "backgroundColor" : "#FFFFFF",
-                "customStyle" : {
-                  "enabled" : null,
-                  "hovered" : null,
-                  "pressed" : null,
-                  "activated" : null,
-                  "disabled" : null
-                },
-                "borderRadius" : "4px"
-              },
-              "background" : {
-                "type" : "color",
-                "color" : "#fff",
-                "overlay" : {
-                  "enabled" : false,
-                  "color" : "rgba(255,255,255,0.72)",
-                  "blur" : 3
-                }
-              },
-              "padding" : "12px"
-            },
-            "title" : "Set Valve 1 - TTN",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "actions" : { },
-            "widgetCss" : "",
-            "noDataDisplayMessage" : "",
-            "titleFont" : {
-              "size" : 16,
-              "sizeUnit" : "px",
-              "family" : "Roboto",
-              "weight" : "500",
-              "style" : null,
-              "lineHeight" : "1.6"
-            },
-            "showTitleIcon" : false,
-            "titleTooltip" : "",
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "pageSize" : 1024,
-            "titleIcon" : "home",
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "configMode" : "advanced",
-            "targetDevice" : {
-              "type" : "entity",
-              "entityAliasId" : "6f907d03-bd3f-d00f-3608-0ec4af9f28ea"
-            },
-            "titleColor" : null,
-            "borderRadius" : null,
-            "datasources" : [ ],
-            "enableDataExport" : true
-          },
-          "row" : 0,
-          "col" : 22,
-          "id" : "50c102a1-a826-be14-edae-cc8c2b33ab67"
-        },
         "0703db1d-2df2-3f97-a0b7-20adb382a3aa" : {
           "typeFullFqn" : "system.toggle_button",
           "type" : "rpc",
@@ -4505,7 +4321,7 @@
           "sizeX" : 8.5,
           "sizeY" : 4.5,
           "config" : {
-            "showTitle" : false,
+            "showTitle" : true,
             "backgroundColor" : "#e6e7e8",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
@@ -4521,7 +4337,7 @@
                 "textColor" : null
               }
             },
-            "title" : "TimePicker_Save",
+            "title" : "Tomar",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
@@ -4535,9 +4351,15 @@
             "targetDeviceAliases" : [ ],
             "datasources" : [ ],
             "targetDevice" : {
-              "type" : "device",
-              "deviceId" : "a4c01fd0-571c-11ef-af78-d14e180afdf5"
-            }
+              "type" : "entity",
+              "entityAliasId" : "6f907d03-bd3f-d00f-3608-0ec4af9f28ea"
+            },
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
@@ -4606,22 +4428,43 @@
             "showLegend" : false,
             "datasources" : [ {
               "type" : "entity",
-              "entityAliasId" : "5238ca94-6b1a-5cfb-8915-cbdfdc3844cc",
+              "entityAliasId" : "6f907d03-bd3f-d00f-3608-0ec4af9f28ea",
               "dataKeys" : [ {
-                "name" : "rega1_end_time",
-                "label" : "rega1_end_time",
+                "name" : "schedule_1",
                 "type" : "attribute",
+                "label" : "schedule",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.8966379710750985
-              } ]
+                "_hash" : 0.8652040334786326
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "displayTimewindow" : false,
             "configMode" : "basic",
-            "actions" : { },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Update_Device_Name",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "updateDashboardState",
+                "targetDashboardStateId" : null,
+                "setEntityId" : true,
+                "stateEntityParamName" : "selected_device",
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "cb6f9301-76b4-8834-fd1f-864716a3f193"
+              } ]
+            },
             "showTitleIcon" : false,
             "titleIcon" : "list",
-            "iconColor" : null
+            "iconColor" : null,
+            "titleFont" : null,
+            "titleColor" : null,
+            "enableDataExport" : true
           },
           "id" : "64018f4f-6d71-afd0-d20d-720a56d4fa38"
         },
@@ -4669,127 +4512,29 @@
           "col" : 0,
           "id" : "bab68abd-1e55-dd88-ff93-ed5befac6044"
         },
-        "b9e779c1-1dbe-9c88-a2fe-0c967eea8c7d" : {
-          "typeFullFqn" : "system.input_widgets.update_multiple_attributes",
-          "type" : "latest",
-          "sizeX" : 7.5,
-          "sizeY" : 3,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entity",
-              "name" : "",
-              "entityAliasId" : "6f907d03-bd3f-d00f-3608-0ec4af9f28ea",
-              "dataKeys" : [ {
-                "name" : "rega1_end_time",
-                "type" : "attribute",
-                "label" : "rega1_end_time",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.8179968972777856
-              }, {
-                "name" : "rega1_repeat",
-                "type" : "attribute",
-                "label" : "rega1_repeat",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.7267182741179712
-              }, {
-                "name" : "rega1_start_time",
-                "type" : "attribute",
-                "label" : "rega1_start_time",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.26078926129923197
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1724431215124,
-                  "endTimeMs" : 1724517615124
-                },
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : true,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "5px",
-            "settings" : {
-              "widgetTitle" : "",
-              "showResultMessage" : true,
-              "showActionButtons" : true,
-              "updateAllValues" : false,
-              "saveButtonLabel" : "",
-              "resetButtonLabel" : "",
-              "showGroupTitle" : false,
-              "groupTitle" : "${entityName}",
-              "fieldsAlignment" : "row",
-              "fieldsInRow" : 2,
-              "rowGap" : 2,
-              "columnGap" : 10
-            },
-            "title" : "Update Multiple Attributes",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "enableDataExport" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "useDashboardTimewindow" : true,
-            "showLegend" : false,
-            "actions" : { },
-            "displayTimewindow" : true,
-            "showTitleIcon" : false,
-            "titleTooltip" : "",
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "b9e779c1-1dbe-9c88-a2fe-0c967eea8c7d"
-        },
-        "0ba16a7b-8f9f-fbaf-0752-cb006d03525c" : {
-          "typeFullFqn" : "tenant.timepicker_save2",
+        "0e77733b-732b-348a-739b-284a9e9764d4" : {
+          "typeFullFqn" : "tenant.valve_control_3",
           "type" : "rpc",
-          "sizeX" : 8.5,
-          "sizeY" : 7.5,
+          "sizeX" : 4,
+          "sizeY" : 2,
           "config" : {
-            "showTitle" : false,
+            "showTitle" : true,
             "backgroundColor" : "#e6e7e8",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
+              "title" : "Set Valve 1",
+              "buttonText" : "Update device attribute",
+              "entityAttributeType" : "SERVER_SCOPE",
+              "entityParameters" : "{}",
               "styleButton" : {
                 "isRaised" : true,
-                "isPrimary" : false
-              },
-              "entityParameters" : "{}",
-              "entityAttributeType" : "SERVER_SCOPE",
-              "buttonText" : "Update device attribute"
+                "isPrimary" : false,
+                "bgColor" : null,
+                "textColor" : null
+              }
             },
-            "title" : "TimePicker_Save2",
+            "title" : "Set Valve 1",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
@@ -4803,103 +4548,19 @@
             "targetDeviceAliases" : [ ],
             "datasources" : [ ],
             "targetDevice" : {
-              "type" : "device",
-              "deviceId" : "a4c01fd0-571c-11ef-af78-d14e180afdf5"
-            }
+              "type" : "entity",
+              "entityAliasId" : "6f907d03-bd3f-d00f-3608-0ec4af9f28ea"
+            },
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "0ba16a7b-8f9f-fbaf-0752-cb006d03525c"
-        },
-        "cd1063ee-f6e7-1b2b-2c30-7da44ec1b120" : {
-          "typeFullFqn" : "system.input_widgets.update_multiple_attributes",
-          "type" : "latest",
-          "sizeX" : 7.5,
-          "sizeY" : 3,
-          "config" : {
-            "datasources" : [ {
-              "type" : "device",
-              "name" : "",
-              "deviceId" : "a4c01fd0-571c-11ef-af78-d14e180afdf5",
-              "dataKeys" : [ {
-                "name" : "rega2_start_Time",
-                "type" : "attribute",
-                "label" : "rega2_start_Time",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.7761519733042361
-              }, {
-                "name" : "rega2_end_time",
-                "type" : "attribute",
-                "label" : "rega2_end_time",
-                "color" : "#4caf50",
-                "settings" : { },
-                "_hash" : 0.5695058108851712
-              }, {
-                "name" : "rega2_repeat",
-                "type" : "attribute",
-                "label" : "rega2_repeat",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.8342261093911383
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1724440633564,
-                  "endTimeMs" : 1724527033564
-                },
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : true,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "8px",
-            "settings" : {
-              "groupTitle" : "${entityName}",
-              "showActionButtons" : true,
-              "fieldsAlignment" : "row",
-              "fieldsInRow" : 2,
-              "columnGap" : 10,
-              "rowGap" : 5
-            },
-            "title" : "Update Multiple Attributes",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "enableDataExport" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "useDashboardTimewindow" : true,
-            "showLegend" : false,
-            "actions" : { },
-            "displayTimewindow" : true
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "cd1063ee-f6e7-1b2b-2c30-7da44ec1b120"
+          "id" : "0e77733b-732b-348a-739b-284a9e9764d4"
         }
       },
       "states" : {
@@ -4970,12 +4631,6 @@
                   "row" : 2,
                   "col" : 0
                 },
-                "50c102a1-a826-be14-edae-cc8c2b33ab67" : {
-                  "sizeX" : 6,
-                  "sizeY" : 2,
-                  "row" : 0,
-                  "col" : 0
-                },
                 "0703db1d-2df2-3f97-a0b7-20adb382a3aa" : {
                   "sizeX" : 6,
                   "sizeY" : 2,
@@ -5039,7 +4694,7 @@
                 "1812c5ff-ef28-a4bc-988d-f118f38b8f56" : {
                   "sizeX" : 7,
                   "sizeY" : 4,
-                  "row" : 27,
+                  "row" : 32,
                   "col" : 11
                 },
                 "1239faad-f91f-b348-68f7-32f8f4e6ff6e" : {
@@ -5049,34 +4704,22 @@
                   "col" : 0
                 },
                 "64018f4f-6d71-afd0-d20d-720a56d4fa38" : {
-                  "sizeX" : 7,
-                  "sizeY" : 4,
-                  "row" : 27,
-                  "col" : 0
-                },
-                "bab68abd-1e55-dd88-ff93-ed5befac6044" : {
-                  "sizeX" : 4,
-                  "sizeY" : 2,
-                  "row" : 27,
-                  "col" : 7
-                },
-                "b9e779c1-1dbe-9c88-a2fe-0c967eea8c7d" : {
-                  "sizeX" : 10,
-                  "sizeY" : 4,
-                  "row" : 21,
-                  "col" : 0
-                },
-                "0ba16a7b-8f9f-fbaf-0752-cb006d03525c" : {
                   "sizeX" : 10,
                   "sizeY" : 6,
                   "row" : 15,
                   "col" : 10
                 },
-                "cd1063ee-f6e7-1b2b-2c30-7da44ec1b120" : {
-                  "sizeX" : 10,
-                  "sizeY" : 4,
-                  "row" : 21,
-                  "col" : 10
+                "bab68abd-1e55-dd88-ff93-ed5befac6044" : {
+                  "sizeX" : 4,
+                  "sizeY" : 2,
+                  "row" : 32,
+                  "col" : 18
+                },
+                "0e77733b-732b-348a-739b-284a9e9764d4" : {
+                  "sizeX" : 6,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
@@ -5175,6 +4818,16 @@
               "id" : "a4c01fd0-571c-11ef-af78-d14e180afdf5"
             },
             "resolveMultiple" : false
+          }
+        },
+        "31c5653f-fe69-ee91-c37c-6dc089b14aac" : {
+          "id" : "31c5653f-fe69-ee91-c37c-6dc089b14aac",
+          "alias" : "selected_device",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : "selected_device",
+            "defaultStateEntity" : null
           }
         }
       },
